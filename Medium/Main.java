@@ -1,3 +1,4 @@
+//Name of challenge is PERMUTATION STEP
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -5,11 +6,13 @@ import java.util.Scanner;
 
 class Main 
 {
-    static ArrayList<Integer> findCombination(int[] array, int pos,ArrayList<Integer> result_set){ 
-
-        if(pos >= array.length - 1){   
+    static ArrayList<Integer> findCombination(int[] array, int pos,ArrayList<Integer> result_set)
+    { 
+        if(pos >= array.length - 1)
+        {   
             int num=0;  
-            for(int i = 0; i < array.length - 1; i++){    
+            for(int i = 0; i < array.length - 1; i++)
+            {    
                 num=num*10+array[i];  
             }  
             if(array.length > 0)   
@@ -62,10 +65,11 @@ class Main
         int final_result=result_set.get(Collections.binarySearch(result_set,partial)+1);
         final_result=Integer.parseInt(str_num.substring(0,index) + Integer.toString(final_result));
         //System.out.println(str_num.substring(0,index+1));
-        return final_result;
-        
+        return final_result;    
     }
-    public static void main(String[] args) {
+    
+    public static void main(String[] args) 
+    {
         Scanner  scan=new Scanner(System.in);
         System.out.println("Enter number");
         int num=scan.nextInt();
